@@ -7,7 +7,7 @@ body{
     padding-top: 4em;
 }
 
-/* posicionamiento del texto sobre imagenes INICIO*/
+/* posicionamiento del texto sobre imagenes index.html */
 .contenedor_texto_img{
     position: relative;
     display: inline-block;
@@ -32,4 +32,14 @@ body{
     .ubicacion{
         width: 576px;
     }
+}
+
+/* Sobre nosotros */
+.img_100{
+    width: 100%;
+}
+
+.p_citacion{
+    font-style: oblique;
+    text-align: center;
 }
