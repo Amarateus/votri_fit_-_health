@@ -1,0 +1,11 @@
+/* mediaQuerys con $variables*/
+@media (min-width: $widthSede){
+    /*tamaño video tour*/
+    .votri_tour{
+        width: $widthSede;
+    }
+    /*tamaño ubicacion*/
+    .ubicacion{
+        width: $widthSede;
+    }
+}

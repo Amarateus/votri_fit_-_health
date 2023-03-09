@@ -1,0 +1,20 @@
+/* posicionamiento del texto sobre imagenes index.html */
+.contenedor_texto_img{
+    position: relative;
+    display: inline-block;
+}
+
+// mixin
+@mixin texto{
+    color: aliceblue;
+    font-weight: bold;
+    -webkit-text-stroke: 1px black;
+}
+
+/*posicionamiento del texto y le incluimos estilos con el @include del mixin*/
+.posicion_texto_img{
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    @include texto;
+}
