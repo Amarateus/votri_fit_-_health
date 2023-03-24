@@ -1,0 +1,81 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding-top: 4em;
+}
+
+/* posicionamiento del texto sobre imagenes index.html */
+.contenedor_texto_img {
+  position: relative;
+  display: inline-block;
+}
+
+.img_ppl {
+  width: 100%;
+}
+
+/*posicionamiento del texto y le incluimos estilos con el @include del mixin*/
+.posicion_texto_img {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  color: aliceblue;
+  font-weight: bold;
+  -webkit-text-stroke: 1px black;
+}
+
+.electro {
+  grid-area: electro;
+}
+
+.thermo {
+  grid-area: thermo;
+}
+
+.fullbody {
+  grid-area: fullbody;
+}
+
+.stretching {
+  grid-area: stretching;
+}
+
+.grilla {
+  display: grid;
+  grid-template-areas: "electro" "thermo" "fullbody" "stretching";
+}
+
+/* mediaQuerys con $variables*/
+@media (min-width: 576px) {
+  .grilla {
+    grid-template-areas: "electro thermo" "fullbody stretching";
+    grid-template-columns: 1fr 1fr;
+  }
+  /*tamaño video tour*/
+  .votri_tour {
+    width: 576px;
+  }
+  /*tamaño ubicacion*/
+  .ubicacion {
+    width: 576px;
+  }
+}
+@media (min-width: 768px) {
+  .grilla {
+    grid-template-areas: "electro thermo fullbody" ". stretching .";
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+/* Sobre nosotros */
+.img_100 {
+  width: 100%;
+}
+
+.p_citacion {
+  font-style: oblique;
+  text-align: center;
+}/*# sourceMappingURL=estilos.css.map */

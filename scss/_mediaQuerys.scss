@@ -1,11 +1,51 @@
+.electro{
+    grid-area: electro;
+}
+
+.thermo{
+    grid-area: thermo;
+}
+
+.fullbody{
+    grid-area: fullbody;
+}
+
+.stretching{
+    grid-area: stretching;
+}
+
+.grilla{
+    display: grid;
+    grid-template-areas: 
+        "electro"
+        "thermo"
+        "fullbody"
+        "stretching";
+}
+
 /* mediaQuerys con $variables*/
-@media (min-width: $widthSede){
+@media (min-width: $widthTablet){
+    .grilla{
+        grid-template-areas: 
+            "electro thermo"
+            "fullbody stretching";
+        grid-template-columns: 1fr 1fr;
+    }
     /*tamaño video tour*/
     .votri_tour{
-        width: $widthSede;
+        width: $widthTablet;
     }
     /*tamaño ubicacion*/
     .ubicacion{
-        width: $widthSede;
+        width: $widthTablet;
+    } 
+}
+
+@media (min-width: $widthDesktop){
+    .grilla{
+        grid-template-areas: 
+            "electro thermo fullbody"
+            ". stretching .";
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
